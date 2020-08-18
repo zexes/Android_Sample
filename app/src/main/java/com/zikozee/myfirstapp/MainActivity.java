@@ -153,6 +153,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.viewIntent:
 
+                // Will all the apps which is imbibing ACTION_VIEW appear on screen ????
+                //This brings up all the applications using ACTION_VIEW
+                Intent intent4 = new Intent(Intent.ACTION_VIEW);
+                startActivity(intent4);
+
                 break;
             case R.id.letsGetPro:
 
