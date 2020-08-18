@@ -1,6 +1,7 @@
 package com.zikozee.myfirstapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -121,6 +122,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mTextView.setText("Somebody definitely pushed the Button 2");
                 break;
             case R.id.dialNumber:
+                // Dial happen to be an android component..
+                // Can we create our own component... ????
+
+                Intent intent1 = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:2347066616366"));//must prefix with "tel:"
+                startActivity(intent1);
 
                 break;
             case R.id.toast:
@@ -130,6 +136,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.showLocation:
+
+                Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:7.2699252,5.2140357,19?z=3")); // must prefix with "geo:", we got location from google map and searched a location and right clicked and choose what's here
+                startActivity(intent2);
 
                 break;
             case R.id.openWebPage:
