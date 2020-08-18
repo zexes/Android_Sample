@@ -12,5 +12,10 @@ public class otherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_other);
 
         Toast.makeText(this, "Landed in Other Activity...", Toast.LENGTH_SHORT).show();
+
+        Bundle bundle = getIntent().getExtras();
+        String str = bundle.getString("KEY");
+
+        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
 }

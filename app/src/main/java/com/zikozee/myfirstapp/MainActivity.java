@@ -161,6 +161,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.letsGetPro:
 
+                // Getting closer to the component..
+
+//                Intent intent5 = new Intent("com.zikozee.myfirstapp.otherActivity");
+//                startActivity(intent5);
+                Intent intent6 = new Intent(Intent.ACTION_VIEW);
+                intent6.putExtra("KEY", "Value is my Data...");
+                // we can pass Objects too but wee need to use parcelable  here...
+                // can be across boundary
+                startActivity(intent6);
+
                 break;
             default:
                 Log.d(TAG, "Nothing happened");
