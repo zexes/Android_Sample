@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="welcome_to_the_world_of_android">Welcome to the World of Android..</string>
+
+    <string name="hello_zikozee">Hello Zikozee</string>
+    <string name="button_push_me">Push me</string>
+</resources>
