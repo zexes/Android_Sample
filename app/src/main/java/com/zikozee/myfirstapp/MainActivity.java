@@ -124,6 +124,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.dialNumber:
                 // Dial happen to be an android component..
                 // Can we create our own component... ????
+                // Can we create our own custom data type like tel: geo: http:
+                //YES
+                //let me show you how to create MyStreamer...
 
                 Intent intent1 = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:2347066616366"));//must prefix with "tel:"
                 startActivity(intent1);
@@ -142,6 +145,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.openWebPage:
+
+                // Even the browsers like chrome or .. is using Intent.ACTION_VIEW
+                Intent intent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zikozee"));
+                startActivity(intent3);
 
                 break;
             case R.id.viewIntent:
