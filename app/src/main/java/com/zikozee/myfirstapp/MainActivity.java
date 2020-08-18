@@ -3,7 +3,9 @@ package com.zikozee.myfirstapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +21,16 @@ public class MainActivity extends AppCompatActivity {
         Button pushMe = findViewById(R.id.pushMeButton);
 
 
-        
+        final TextView textView = findViewById(R.id.textView);
+        pushMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.d(TAG, "Somebody pushed me");
+                textView.setText("Somebody definitely pushed the Button");
+//                textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            }
+        });
 
         Log.d(TAG, "in onCreate");
 //        Log.e(TAG, "in onCreate");
