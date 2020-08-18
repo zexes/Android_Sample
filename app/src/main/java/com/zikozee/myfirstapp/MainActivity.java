@@ -1,5 +1,6 @@
 package com.zikozee.myfirstapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     final String TAG = "ACTIVITY_DEMO";
     private TextView mTextView;
+    Button dialPhone, toast, showLocation, openWebPage, viewIntent, letsGetPro;
 
     //This is where we take care of core business logic...
     @Override
@@ -25,6 +27,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         pushMe.setOnClickListener(this);// we use this here since MainActivity now Implements the Viw.OnclickListener hence control delegated to it. as we implemented below based on the implemented method
         pushMe2.setOnClickListener(this);
+
+        dialPhone = findViewById(R.id.dialNumber);
+        toast = findViewById(R.id.toast);
+        showLocation = findViewById(R.id.showLocation);
+        openWebPage = findViewById(R.id.openWebPage);
+        viewIntent = findViewById(R.id.viewIntent);
+        letsGetPro = findViewById(R.id.letsGetPro);
+
+        dialPhone.setOnClickListener(this);
+        toast.setOnClickListener(this);
+        showLocation.setOnClickListener(this);
+        openWebPage.setOnClickListener(this);
+        viewIntent.setOnClickListener(this);
+        letsGetPro.setOnClickListener(this);
+
+
+
+
 //        pushMe.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -100,7 +120,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d(TAG, "Somebody pushed me 2");
                 mTextView.setText("Somebody definitely pushed the Button 2");
                 break;
+            case R.id.dialNumber:
 
+                break;
+            case R.id.toast:
+
+                Intent intent = new Intent(MainActivity.this, otherActivity.class);
+                startActivity(intent);
+
+                break;
+            case R.id.showLocation:
+
+                break;
+            case R.id.openWebPage:
+
+                break;
+            case R.id.viewIntent:
+
+                break;
+            case R.id.letsGetPro:
+
+                break;
             default:
                 Log.d(TAG, "Nothing happened");
         }
